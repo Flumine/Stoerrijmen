@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Stoer Rijmen voor Lot — download</title>
+  <meta name="description" content="Download ‘Stoer rijmen voor Lot’ (MP3). Punk meets Hello Kitty." />
+
+  <meta property="og:title" content="Stoer Rijmen voor Lot" />
+  <meta property="og:description" content="Download de track (MP3). Punk meets Hello Kitty." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b0b10;
+      --card: rgba(18, 18, 26, 0.92);
+      --ink: #f6f6ff;
+      --muted: rgba(246,246,255,.72);
+      --pink: #ff2fb3;
+      --hotpink: #ff4fd1;
+      --acid: #b7ff2a;
+      --cyan: #27f6ff;
+      --shadow: rgba(0,0,0,.55);
+      --stroke: rgba(255,255,255,.14);
+      --stroke2: rgba(255,47,179,.35);
+      --radius: 22px;
+    }
+
+    *{ box-sizing: border-box; }
+
+    html, body{ height: 100%; }
+
+    body{
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 900px at 15% 10%, rgba(255,47,179,.20), transparent 55%),
+        radial-gradient(1000px 800px at 85% 15%, rgba(183,255,42,.13), transparent 60%),
+        radial-gradient(1100px 900px at 30% 90%, rgba(39,246,255,.10), transparent 62%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.06) 0 6px, rgba(255,255,255,0) 6px 14px),
+        var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing: 0.2px;
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    .top{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--stroke);
+      background: rgba(0,0,0,.30);
+      width: fit-content;
+      box-shadow: 0 10px 24px var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--pink);
+      box-shadow: 0 0 0 3px rgba(255,47,179,.18), 0 0 26px rgba(255,47,179,.55);
+    }
+
+    h1{
+      margin: 6px 0 6px;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.8px;
+      text-transform: uppercase;
+      text-shadow:
+        0 0 0 transparent,
+        0 6px 0 rgba(0,0,0,.20),
+        0 18px 50px rgba(0,0,0,.60);
+    }
+
+    h1 .cute{
+      display: inline-block;
+      transform: rotate(-2deg);
+      padding: 0 8px;
+      margin-left: 6px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(255,47,179,.18), rgba(39,246,255,.12));
+      border: 1px solid rgba(255,47,179,.28);
+    }
+
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 70ch;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    @media (min-width: 860px){
+      .grid{
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+      }
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 60px var(--shadow);
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before{
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background:
+        radial-gradient(420px 220px at 20% 15%, rgba(255,79,209,.16), transparent 60%),
+        radial-gradient(360px 260px at 80% 10%, rgba(183,255,42,.10), transparent 55%),
+        radial-gradient(420px 280px at 30% 85%, rgba(39,246,255,.10), transparent 60%);
+      pointer-events: none;
+      filter: blur(0.2px);
+    }
+
+    .card > *{ position: relative; }
+
+    .title{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .title h2{
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag{
+      font-size: 12px;
+      color: rgba(246,246,255,.85);
+      border: 1px dashed rgba(255,255,255,.24);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.24);
+    }
+
+    .cta{
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.30);
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 14px 30px rgba(0,0,0,.40);
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+      user-select: none;
+    }
+
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,47,179,.42); }
+    .btn:active{ transform: translateY(1px); }
+
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(255,47,179,.32), rgba(0,0,0,.18));
+      border-color: rgba(255,47,179,.55);
+    }
+
+    .btn.primary .icon{
+      filter: drop-shadow(0 0 14px rgba(255,47,179,.60));
+    }
+
+    .btn.secondary{
+      background: linear-gradient(135deg, rgba(183,255,42,.16), rgba(0,0,0,.18));
+    }
+
+    .btn.tertiary{
+      background: linear-gradient(135deg, rgba(39,246,255,.14), rgba(0,0,0,.18));
+    }
+
+    .small{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      margin-top: 10px;
+    }
+
+    .audio{
+      width: 100%;
+      margin-top: 14px;
+      border-radius: 14px;
+      accent-color: var(--pink);
+    }
+
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(246,246,255,.86);
+    }
+
+    .list li{ margin: 6px 0; }
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      color: rgba(246,246,255,.78);
+    }
+
+    .footer{
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: rgba(246,246,255,.58);
+      font-size: 12px;
+    }
+
+    .stickerRow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .sticker{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.26);
+      box-shadow: 0 10px 26px rgba(0,0,0,.38);
+      font-size: 12px;
+      color: rgba(246,246,255,.82);
+    }
+
+    .sticker svg{ width: 16px; height: 16px; }
+
+    .spark{
+      color: var(--acid);
+      text-shadow: 0 0 22px rgba(183,255,42,.35);
+    }
+
+    .pink{
+      color: var(--hotpink);
+      text-shadow: 0 0 22px rgba(255,47,179,.33);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>
+      Stoer Rijmen <span class="cute">voor Lot</span>
+    </h1>
+
+    <section class="card" aria-label="download">
+      <div class="cta">
+        <a class="btn primary" href="Stoer%20rijmen%20voor%20Lot.mp3" download>
+          <span class="icon" aria-hidden="true">⬇</span>
+          Download (MP3)
+        </a>
+      </div>
+
+      <audio class="audio" controls preload="metadata">
+        <source src="Stoer%20rijmen%20voor%20Lot.mp3" type="audio/mpeg" />
+        Je browser ondersteunt geen audio player. Gebruik de downloadknop.
+      </audio>
+    </section>
+  </div>
+</body>
+</html>
