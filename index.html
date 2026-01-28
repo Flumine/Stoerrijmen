@@ -43,12 +43,13 @@
       color: var(--ink);
       position: relative;
       background:
-        radial-gradient(1200px 900px at 15% 10%, rgba(255,47,179,.28), transparent 58%),
-        radial-gradient(1000px 800px at 85% 15%, rgba(183,255,42,.18), transparent 62%),
-        radial-gradient(1100px 900px at 30% 90%, rgba(39,246,255,.14), transparent 66%),
-        repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 6px, rgba(255,255,255,0) 6px 14px),
-        repeating-linear-gradient(-18deg, rgba(255,210,0,.18) 0 12px, rgba(0,0,0,0) 12px 26px),
-        repeating-linear-gradient(18deg, rgba(255,47,179,.10) 0 10px, rgba(0,0,0,0) 10px 22px),
+        radial-gradient(1200px 900px at 15% 10%, rgba(255,47,179,.34), transparent 58%),
+        radial-gradient(1000px 800px at 85% 15%, rgba(183,255,42,.22), transparent 62%),
+        radial-gradient(1100px 900px at 30% 90%, rgba(39,246,255,.16), transparent 66%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.09) 0 6px, rgba(255,255,255,0) 6px 14px),
+        repeating-linear-gradient(-18deg, rgba(255,210,0,.28) 0 12px, rgba(0,0,0,0) 12px 26px),
+        repeating-linear-gradient(18deg, rgba(255,47,179,.14) 0 10px, rgba(0,0,0,0) 10px 22px),
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.10)),
         var(--bg);
       font-family: var(--font-ui);
       letter-spacing: 0.15px;
@@ -62,8 +63,41 @@
       background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27260%27%20height%3D%27260%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3C/filter%3E%3Crect%20width%3D%27260%27%20height%3D%27260%27%20filter%3D%27url(%23n)%27%20opacity%3D%270.65%27/%3E%3C/svg%3E");
       background-size: 320px 320px;
       mix-blend-mode: overlay;
-      opacity: 0.22;
+      opacity: 0.30;
       filter: contrast(115%) saturate(120%);
+      z-index: 0;
+    }
+
+    /* Halftone dots + splatter: pure CSS/data-URI, no extra assets */
+    body::selection{ background: rgba(255,47,179,.35); }
+
+    body .wrap::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,47,179,.18) 0 2px, transparent 2px 12px),
+        radial-gradient(circle at 70% 30%, rgba(183,255,42,.14) 0 2px, transparent 2px 12px),
+        radial-gradient(circle at 40% 85%, rgba(39,246,255,.12) 0 2px, transparent 2px 12px),
+        radial-gradient(circle at 85% 75%, rgba(255,255,255,.06) 0 1px, transparent 1px 10px);
+      background-size: 22px 22px, 26px 26px, 28px 28px, 18px 18px;
+      mix-blend-mode: overlay;
+      opacity: 0.35;
+      filter: contrast(140%);
+      z-index: 0;
+    }
+
+    body .wrap::after{
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27600%27%20height%3D%27600%27%20viewBox%3D%270%200%20600%20600%27%3E%3Cg%20fill%3D%27%23ff2fb3%27%20fill-opacity%3D%270.18%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%27100%27%20r%3D%274%27/%3E%3Ccircle%20cx%3D%27110%27%20cy%3D%27140%27%20r%3D%272%27/%3E%3Ccircle%20cx%3D%27170%27%20cy%3D%2750%27%20r%3D%273%27/%3E%3Ccircle%20cx%3D%27230%27%20cy%3D%2790%27%20r%3D%275%27/%3E%3Ccircle%20cx%3D%27310%27%20cy%3D%27120%27%20r%3D%272%27/%3E%3Ccircle%20cx%3D%27420%27%20cy%3D%2760%27%20r%3D%274%27/%3E%3Ccircle%20cx%3D%27510%27%20cy%3D%27130%27%20r%3D%273%27/%3E%3Ccircle%20cx%3D%27560%27%20cy%3D%2790%27%20r%3D%272%27/%3E%3Ccircle%20cx%3D%2760%27%20cy%3D%27470%27%20r%3D%273%27/%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%27520%27%20r%3D%275%27/%3E%3Ccircle%20cx%3D%27210%27%20cy%3D%27540%27%20r%3D%272%27/%3E%3Ccircle%20cx%3D%27310%27%20cy%3D%27510%27%20r%3D%274%27/%3E%3Ccircle%20cx%3D%27410%27%20cy%3D%27560%27%20r%3D%273%27/%3E%3Ccircle%20cx%3D%27510%27%20cy%3D%27520%27%20r%3D%275%27/%3E%3Ccircle%20cx%3D%27560%27%20cy%3D%27550%27%20r%3D%272%27/%3E%3C/g%3E%3Cg%20fill%3D%27%23b7ff2a%27%20fill-opacity%3D%270.12%27%3E%3Ccircle%20cx%3D%27480%27%20cy%3D%27280%27%20r%3D%275%27/%3E%3Ccircle%20cx%3D%27540%27%20cy%3D%27340%27%20r%3D%273%27/%3E%3Ccircle%20cx%3D%27520%27%20cy%3D%27420%27%20r%3D%274%27/%3E%3Ccircle%20cx%3D%27440%27%20cy%3D%27390%27%20r%3D%272%27/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 560px 560px;
+      mix-blend-mode: screen;
+      opacity: 0.65;
+      filter: contrast(120%) saturate(140%);
       z-index: 0;
     }
 
@@ -169,10 +203,20 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(90deg, rgba(255,47,179,.18), rgba(183,255,42,.10)),
-        repeating-linear-gradient(135deg, rgba(255,255,255,.08) 0 2px, rgba(255,255,255,0) 2px 7px);
+        linear-gradient(90deg, rgba(255,47,179,.22), rgba(183,255,42,.12)),
+        radial-gradient(220px 180px at 20% 20%, rgba(255,255,255,.10), transparent 60%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.10) 0 2px, rgba(255,255,255,0) 2px 7px);
       mix-blend-mode: overlay;
-      opacity: 0.35;
+      opacity: 0.46;
+    }
+
+    .photo .glitch{
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: inherit;
+      mix-blend-mode: screen;
+      opacity: 0.0;
     }
 
     .photo::after{
@@ -196,7 +240,20 @@
       height: auto;
       aspect-ratio: 4 / 3;
       object-fit: cover;
-      filter: contrast(1.10) saturate(1.12);
+      filter: contrast(1.28) saturate(1.38) hue-rotate(-10deg);
+    }
+
+    @media (prefers-reduced-motion: no-preference){
+      .photo img{
+        animation: punkFlicker 6.2s infinite steps(1, end);
+      }
+
+      @keyframes punkFlicker{
+        0%, 92%, 100% { filter: contrast(1.28) saturate(1.38) hue-rotate(-10deg); }
+        93% { filter: contrast(1.45) saturate(1.55) hue-rotate(6deg); }
+        94% { filter: contrast(1.18) saturate(1.25) hue-rotate(-18deg); }
+        95% { filter: contrast(1.35) saturate(1.45) hue-rotate(-6deg); }
+      }
     }
 
     .sub{
