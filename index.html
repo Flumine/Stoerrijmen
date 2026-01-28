@@ -43,17 +43,14 @@
       color: var(--ink);
       position: relative;
       background:
-        /* neon corners */
-        radial-gradient(900px 700px at 12% 8%, rgba(255,47,179,.28), transparent 60%),
-        radial-gradient(800px 680px at 88% 18%, rgba(183,255,42,.18), transparent 62%),
-        /* hazard stripes (big + loud) */
-        repeating-linear-gradient(135deg, rgba(255,210,0,.55) 0 18px, rgba(0,0,0,.58) 18px 36px),
-        /* xerox scanlines */
-        repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, rgba(0,0,0,0) 1px 6px),
-        /* scratched ink */
-        repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 2px, rgba(0,0,0,0) 2px 11px),
-        linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,.18)),
-        #05050a;
+        /* your splatter image */
+        linear-gradient(180deg, rgba(0,0,0,.82), rgba(0,0,0,.28)),
+        url("splatter-paint-2165225_1920.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-blend-mode: multiply;
       font-family: var(--font-ui);
       letter-spacing: 0.15px;
     }
